@@ -14,13 +14,11 @@ def start_chat():
 
         response = chat_session.send_message(user_input)
 
-        # print(chat_session.history)
-
         model_response = response.text
         print(f"Resposta: {model_response}")
         print("")
         history.append({"role": "user", "parts": [user_input]})
         history.append({"role": "model", "parts": [model_response]})
 
-
+start_chat()
 
